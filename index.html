@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#100b0e">
+  <meta name="description" content="LOCKDOWN — DayZ Chernarus. 1PP, PvP, Solo/Duo/Trio, 24/7 raids, custom events and high-risk loot. Build. Raid. Loot. Trade. Survive.">
+  <meta property="og:title" content="LOCKDOWN — DayZ Chernarus">
+  <meta property="og:description" content="Your next fight starts here. Build. Raid. Loot. Trade. Survive.">
+  <meta property="og:type" content="website">
+  <title>LOCKDOWN — DayZ Chernarus</title>
+  <style>
+    :root{--bg:#09080a;--panel:#131014;--panel2:#1a1419;--red:#a51f36;--red2:#e13b50;--text:#f5f0f2;--muted:#b5aab0;--line:#38242b;--max:1180px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:82px}
+    body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    a{color:inherit;text-decoration:none}a:hover{color:#fff}
+    .wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+    .topline{height:3px;background:linear-gradient(90deg,#4b101d,var(--red2),#4b101d)}
+    header{position:sticky;top:0;z-index:20;background:rgba(9,8,10,.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(165,31,54,.28)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:74px}
+    .brand{font-size:1.22rem;font-weight:950;letter-spacing:.18em}.brand span{color:var(--red2)}
+    nav{display:flex;align-items:center;gap:22px;font-size:.88rem;color:#d6cbd0}
+    nav a{white-space:nowrap}.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:11px 17px;border:1px solid var(--red);background:var(--red);color:white;font-weight:800;letter-spacing:.04em;border-radius:3px;transition:.2s}
+    .nav-cta:hover,.btn:hover{background:#c62b43;transform:translateY(-1px)}
+    .btn.secondary{background:transparent;border-color:#5a3a43}.btn.secondary:hover{border-color:var(--red2)}
+    .hero{position:relative;overflow:hidden;min-height:610px;display:flex;align-items:center;border-bottom:1px solid var(--line);background:
+      radial-gradient(ellipse at 78% 38%,rgba(153,20,47,.27),transparent 34%),
+      linear-gradient(112deg,#0a080a 10%,rgba(14,9,12,.96) 52%,rgba(34,9,17,.88)),
+      repeating-linear-gradient(135deg,transparent 0 40px,rgba(255,255,255,.018) 41px 42px)}
+    .hero:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,transparent 49%,rgba(220,40,65,.08) 50%,transparent 51%),linear-gradient(0deg,rgba(0,0,0,.6),transparent 40%)}
+    .hero-inner{position:relative;z-index:1;padding:86px 0 90px;max-width:780px}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;color:#ff8a9b;font-size:.76rem;font-weight:900;letter-spacing:.22em;text-transform:uppercase}
+    .eyebrow:before{content:"";width:30px;height:2px;background:var(--red2)}
+    h1{font-size:clamp(3.2rem,9vw,7.4rem);line-height:.91;letter-spacing:-.065em;margin:22px 0 24px;font-weight:1000}
+    h1 .outline{color:transparent;-webkit-text-stroke:1px #e8dce0}
+    .hero p{font-size:clamp(1rem,2vw,1.22rem);color:#d0c4ca;max-width:620px;margin:0 0 30px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap}
+    .hero-meta{display:flex;gap:28px;flex-wrap:wrap;margin-top:45px;color:#b8aab1;font-size:.82rem;text-transform:uppercase;letter-spacing:.1em}
+    .hero-meta strong{display:block;color:#fff;font-size:1rem;letter-spacing:.04em}
+    .section{padding:82px 0}.section.alt{background:#0e0b0e;border-top:1px solid #21161b;border-bottom:1px solid #21161b}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:30px}
+    .kicker{color:#e85a6d;text-transform:uppercase;font-size:.74rem;font-weight:900;letter-spacing:.2em}
+    h2{font-size:clamp(2rem,4vw,3.2rem);line-height:1.05;letter-spacing:-.04em;margin:8px 0 0}
+    .section-head p{max-width:440px;color:var(--muted);margin:0}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .feature{background:linear-gradient(145deg,#191318,#100d10);border:1px solid #33232a;padding:24px;min-height:190px;position:relative;overflow:hidden}
+    .feature:before{content:"";position:absolute;top:0;left:0;width:42px;height:2px;background:var(--red2)}
+    .feature .num{color:#e45367;font-weight:900;font-size:.76rem;letter-spacing:.15em}
+    .feature h3{font-size:1.15rem;margin:12px 0 7px}.feature p{margin:0;color:var(--muted);font-size:.94rem}
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+    .panel{background:var(--panel);border:1px solid #33232a;padding:26px}
+    .panel h3{margin:0 0 12px;font-size:1.3rem}.panel p{color:var(--muted)}
+    .tagrow{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+    .tag{border:1px solid #4a3038;color:#e6d9de;background:#191116;padding:5px 9px;font-size:.78rem}
+    .guide-list{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    details{background:#151015;border:1px solid #35232a;padding:0 18px}
+    summary{cursor:pointer;list-style:none;padding:17px 24px 17px 0;font-weight:800;position:relative}
+    summary::-webkit-details-marker{display:none}
+    summary:after{content:"+";position:absolute;right:0;color:var(--red2);font-size:1.35rem;top:11px}
+    details[open] summary:after{content:"−"}
+    details p{color:var(--muted);margin:0;padding:0 0 18px}
+    .status-box{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:24px;background:#151015;border:1px solid #38252c}
+    .status-indicator{display:flex;align-items:center;gap:10px;color:#e9dfe3;font-weight:800}
+    .dot{width:9px;height:9px;border-radius:50%;background:#e4a83d;box-shadow:0 0 12px #e4a83d}
+    .status-note{color:var(--muted);font-size:.85rem;max-width:580px}
+    .rules{counter-reset:rule;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .rule{border-left:2px solid var(--red);background:#141014;padding:16px 18px;color:#d6cbd0}
+    .rule strong{display:block;color:#fff;margin-bottom:4px}
+    .join{background:radial-gradient(ellipse at 50% 0,rgba(165,31,54,.25),transparent 60%),#100b0e;text-align:center;border-top:1px solid var(--line)}
+    .join h2{max-width:760px;margin:12px auto 18px}.join p{max-width:650px;margin:0 auto 28px;color:var(--muted)}
+    .server-ip{display:inline-flex;gap:10px;align-items:center;border:1px solid #52313b;padding:10px 14px;margin-top:18px;color:#e9dce1;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+    .server-ip button{background:none;color:#ff8192;border:0;cursor:pointer;font:inherit;font-weight:800}
+    footer{border-top:1px solid #302027;padding:28px 0;color:#93868d;font-size:.82rem}
+    .foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.foot strong{color:#e7dbe0;letter-spacing:.12em}
+    .small-note{font-size:.78rem;color:#8f8188}
+    @media(max-width:900px){nav{gap:12px}.grid{grid-template-columns:repeat(2,1fr)}.section-head{align-items:start;flex-direction:column}}
+    @media(max-width:650px){.wrap{width:min(100% - 28px,var(--max))}.nav{min-height:64px}nav{display:none}.hero{min-height:570px}.hero-inner{padding:70px 0}.grid,.split,.guide-list,.rules{grid-template-columns:1fr}.section{padding:62px 0}.hero-meta{gap:20px}.status-box{align-items:start;flex-direction:column}}
+  </style>
+</head>
+<body>
+<div class="topline"></div>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home" aria-label="LOCKDOWN home">LOCK<span>DOWN</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#features">Features</a><a href="#guides">Guides</a><a href="#events">Events</a><a href="#rules">Rules</a><a href="#status">Status</a>
+    </nav>
+    <a class="nav-cta" href="https://discord.gg/5feUcjkB5c" target="_blank" rel="noopener">JOIN DISCORD ↗</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="wrap hero-inner">
+      <div class="eyebrow">DayZ • Chernarus • 1PP</div>
+      <h1>WELCOME TO<br><span class="outline">LOCKDOWN</span></h1>
+      <p>A hostile world. Valuable loot. No easy wins. Build your base, gear up, take the fight to other survivors and make your mark on Chernarus.</p>
+      <div class="actions">
+        <a class="btn" href="https://discord.gg/5feUcjkB5c" target="_blank" rel="noopener">JOIN THE COMMUNITY ↗</a>
+        <a class="btn secondary" href="#features">EXPLORE THE SERVER ↓</a>
+      </div>
+      <div class="hero-meta">
+        <div><strong>1PP</strong>First-person only</div>
+        <div><strong>SOLO / DUO / TRIO</strong>Choose your squad</div>
+        <div><strong>PvP ON</strong>Stay alert</div>
+        <div><strong>24/7 RAIDS</strong>No safe hours</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="features">
+    <div class="wrap">
+      <div class="section-head"><div><div class="kicker">Know your battlefield</div><h2>BUILT FOR SURVIVORS.</h2></div><p>Every run is a chance to get richer, take a bigger risk or lose everything. Choose your route and play your way.</p></div>
+      <div class="grid">
+        <article class="feature"><div class="num">01 / BUILD</div><h3>RA Building</h3><p>Build, fortify and defend your base. Your work is only as safe as your next decision.</p></article>
+        <article class="feature"><div class="num">02 / RAID</div><h3>24/7 Raids</h3><p>No scheduled safety window. Protect your stash, plan your defence and strike when the opportunity comes.</p></article>
+        <article class="feature"><div class="num">03 / ACCESS</div><h3>Keys & Keycards</h3><p>Track down access items and push into restricted loot locations. Risk and reward go hand in hand.</p></article>
+        <article class="feature"><div class="num">04 / EVENTS</div><h3>Oil Rig & Airdrops</h3><p>Contest valuable locations and race other survivors to high-value drops.</p></article>
+        <article class="feature"><div class="num">05 / HUNT</div><h3>Heli Patrol & KOTH</h3><p>Watch the skies, fight for control and be ready when an event turns the map into a warzone.</p></article>
+        <article class="feature"><div class="num">06 / SURVIVE</div><h3>Custom Toxic Zone</h3><p>Prepare properly before entering a dangerous zone where valuable loot may be waiting.</p></article>
+        <article class="feature"><div class="num">07 / TRADE</div><h3>High-Tier Trader</h3><p>Play events, earn gold and work towards better gear and rewards.</p></article>
+        <article class="feature"><div class="num">08 / VEHICLES</div><h3>Custom Vehicles</h3><p>Travel Chernarus with custom vehicle options. Keep your ride ready and your route planned.</p></article>
+        <article class="feature"><div class="num">09 / GEAR UP</div><h3>Custom Gear & Weapons</h3><p>Explore additional weapons, gear and storage from the server's modded ecosystem.</p></article>
+      </div>
+      <div class="tagrow"><span class="tag">CHERNARUS</span><span class="tag">MONTHLY WIPE</span><span class="tag">SOLO / DUO / TRIO</span><span class="tag">NO PAY-TO-WIN GEAR</span></div>
+    </div>
+  </section>
+
+  <section class="section alt" id="guides">
+    <div class="wrap">
+      <div class="section-head"><div><div class="kicker">Know before you go</div><h2>FIELD GUIDES</h2></div><p>Quick starting points for new survivors. Check Discord for the latest event details and server-specific updates.</p></div>
+      <div class="guide-list">
+        <details><summary>Helicopter Crash Sites</summary><p>Crash sites can contain valuable loot—or very little. Check every site you discover, stay alert while looting and never assume the area is safe.</p></details>
+        <details><summary>Keys & Keycards</summary><p>Keep track of the keys and keycards you find. They can give you access to restricted areas. Check the latest LOCKDOWN guide in Discord for current locations and requirements.</p></details>
+        <details><summary>Base Building & Raiding</summary><p>Choose your base location carefully, reinforce your defences and assume that another team may eventually find it. Raids are enabled 24/7.</p></details>
+        <details><summary>Events & High-Value Loot</summary><p>Events attract attention. Prepare your loadout, plan an escape route and remember that other survivors may be waiting for the same reward.</p></details>
+        <details><summary>Custom Toxic Zone</summary><p>Do not enter unprepared. Bring the required protection and check current server guidance before attempting a run.</p></details>
+        <details><summary>Trading & Gold Rewards</summary><p>PLAY EVENTS • EARN GOLD • GET REWARDED. Check Discord for current event rules, reward details and trader information.</p></details>
+      </div>
+      <p class="small-note">Guides are starter information. Exact item requirements, loot tables and event timings may change with server updates.</p>
+    </div>
+  </section>
+
+  <section class="section" id="events">
+    <div class="wrap">
+      <div class="section-head"><div><div class="kicker">No easy victories</div><h2>EVENTS & OPERATIONS</h2></div><p>Join the Discord to see confirmed event announcements, start times, rules and rewards.</p></div>
+      <div class="split">
+        <div class="panel"><div class="kicker">Community events</div><h3>Fight for the reward.</h3><p>From contested loot to player hunts, events give survivors a reason to gear up and take a risk. Event details are announced in Discord.</p><a class="btn" href="https://discord.gg/5feUcjkB5c" target="_blank" rel="noopener">VIEW ANNOUNCEMENTS ↗</a></div>
+        <div class="panel"><div class="kicker">Server updates</div><h3>Stay in the loop.</h3><p>Wipes, maintenance, changelogs and event changes can affect your next run. Check the official Discord before heading out.</p><a class="btn secondary" href="https://discord.gg/5feUcjkB5c" target="_blank" rel="noopener">LATEST UPDATES ↗</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" id="rules">
+    <div class="wrap">
+      <div class="section-head"><div><div class="kicker">Read before deployment</div><h2>SERVER RULES</h2></div><p>Play hard, compete fairly and help keep LOCKDOWN worth coming back to.</p></div>
+      <div class="rules">
+        <div class="rule"><strong>01. No cheating</strong>Cheats, hacks and unauthorised exploits are not allowed.</div>
+        <div class="rule"><strong>02. No exploiting bugs</strong>Do not abuse glitches or unintended mechanics for an advantage. Report issues to staff.</div>
+        <div class="rule"><strong>03. Respect the community</strong>Harassment, threats and targeted abuse are not acceptable.</div>
+        <div class="rule"><strong>04. Follow event rules</strong>Event-specific restrictions and objectives apply when announced.</div>
+        <div class="rule"><strong>05. No impersonation</strong>Do not impersonate staff or mislead players about official decisions.</div>
+        <div class="rule"><strong>06. Check official updates</strong>Read the full, current rules in Discord. Staff decisions and detailed rules are published there.</div>
+      </div>
+      <p class="small-note">This is a quick summary, not a replacement for the complete official rules. The Discord rules channel takes precedence if anything differs.</p>
+      <div style="margin-top:22px"><a class="btn secondary" href="https://discord.gg/5feUcjkB5c" target="_blank" rel="noopener">READ FULL RULES IN DISCORD ↗</a></div>
+    </div>
+  </section>
+
+  <section class="section" id="status">
+    <div class="wrap">
+      <div class="section-head"><div><div class="kicker">Before you connect</div><h2>SERVER STATUS</h2></div><p>LOCKDOWN server status and connection details.</p></div>
+      <div class="status-box">
+        <div><div class="status-indicator"><span class="dot"></span> SERVER ONLINE</div><p class="status-note">Status is set manually and is not checked in real time. Check Discord for maintenance notices or connection issues.</p></div>
+        <a class="btn secondary" href="https://discord.gg/5feUcjkB5c" target="_blank" rel="noopener">CHECK DISCORD ↗</a>
+      </div>
+      <div class="server-ip"><span>SERVER IP</span><strong id="serverIp">37.156.35.32:2402</strong><button onclick="copyIP()" type="button">COPY</button></div>
+      <div id="copyMsg" class="small-note" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <section class="section join" id="join">
+    <div class="wrap">
+      <div class="kicker">Your next fight starts here</div>
+      <h2>BUILD. RAID. LOOT.<br>TRADE. SURVIVE.</h2>
+      <p>Find your squad, learn the battlefield and make your name in Chernarus. Solo, Duo or Trio—the next fight is waiting.</p>
+      <div class="actions" style="justify-content:center">
+        <a class="btn" href="https://discord.gg/5feUcjkB5c" target="_blank" rel="noopener">JOIN LOCKDOWN DISCORD ↗</a>
+        <a class="btn secondary" href="#status">GET SERVER IP ↓</a>
+      </div>
+      <div class="server-ip"><span>CONNECT</span><strong>37.156.35.32:2402</strong><button onclick="copyIP()" type="button">COPY</button></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div><strong>LOCKDOWN</strong><br>DayZ • Chernarus • 1PP</div>
+    <div>Community links: <a href="https://discord.gg/5feUcjkB5c" target="_blank" rel="noopener">Discord</a> · <a href="#rules">Rules</a> · <a href="#status">Server Status</a></div>
+    <div>Not affiliated with Bohemia Interactive.</div>
+  </div>
+</footer>
+<script>
+function copyIP(){
+  const ip='37.156.35.32:2402';
+  const msg=document.getElementById('copyMsg');
+  if(navigator.clipboard && window.isSecureContext){
+    navigator.clipboard.writeText(ip).then(()=>{msg.textContent='Server IP copied.'}).catch(()=>{fallbackCopy(ip,msg)});
+  } else { fallbackCopy(ip,msg); }
+}
+function fallbackCopy(text,msg){
+  const input=document.createElement('textarea');input.value=text;input.style.position='fixed';input.style.opacity='0';document.body.appendChild(input);input.select();
+  try{document.execCommand('copy');msg.textContent='Server IP copied.'}catch(e){msg.textContent='Copy failed. Select the IP and copy it manually.'}
+  input.remove();
+}
+</script>
+</body>
+</html>
